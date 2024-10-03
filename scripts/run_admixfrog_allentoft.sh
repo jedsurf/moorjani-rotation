@@ -20,11 +20,11 @@ mkdir -p $outpath
 
 echo "Running admixfrog on sample $1"
 
-# admixfrog-bam \
-#     --vcfgt $data_dir/all.neo_impute_ph.vcf.gz \
-#     --ref $ref_file \
-#     --out "$in_file" \
-#     --target $1 --force-target-file
+admixfrog-bam \
+    --vcfgt $data_dir/all.neo_impute_ph.vcf.gz \
+    --ref $ref_file \
+    --out "$in_file" \
+    --target $1 --force-target-file
 
 admixfrog --states AFR NEA DEN --cont-id AFR \
     --ll-tol 0.01 --bin-size 5000 --est-F --est-tau --freq-F 3 --freq-contamination 3 \
