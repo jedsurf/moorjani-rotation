@@ -20,7 +20,7 @@ mkdir -p $outpath
 echo "Running admixfrog on chromosome $1 of sample Ust_Ishim"
 
 admixfrog-bam \
-    --vcfgt /global/scratch/p2p3/pl1_moorjani/SHARED_LAB/DATASETS/hg19/ANCIENT/EMH+ARCHAIC/updated/merged_var_nosing_sites_arch_apes_g1000_chr$1.vcf.gz \
+    --vcfgt /global/scratch/p2p3/pl1_moorjani/SHARED_LAB/DATASETS/hg19/ANCIENT/ARCHAIC/Ust_Ishim/chr{$1}_mq25_mapab100.vcf.gz \
     --chroms $1 \
     --ref $ref_file \
     --out "$in_file" \
