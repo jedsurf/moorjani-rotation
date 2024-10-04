@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=admixfrog
+#SBATCH --job-name=admixfrog_allentoft
 #SBATCH --account=co_moorjani
 #SBATCH --partition=savio3_htc
 #SBATCH --ntasks-per-core=1
@@ -11,6 +11,9 @@
 # Script to run admixfrog on ancient samples from allentoft et al.
 # this relies on a concatenated vcf file for all autosomes and 
 # calculates introgression for all chromosomes at once
+
+# USAGE: xargs -a ../processed-data/noflag.inds.txt sbatch run_admixfrog_allentoft.sh
+# This runs this script on all ancient samples from the paper that have no "flags" indicating poor quality
 
 data_dir=../processed-data
 outpath=$data_dir/admixfrog-allentoft/$1
