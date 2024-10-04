@@ -1,3 +1,4 @@
 processed-data
 .DS_Store
 scratch
+src/__pycache__/
